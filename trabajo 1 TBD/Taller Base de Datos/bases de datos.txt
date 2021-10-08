@@ -1,0 +1,34 @@
+daabases Clientes PowderCake1.0
+
+Clientes			
+id			:
+usuario			:
+nivel			:
+contacto			:	
+clave de acceso		:
+direccion real		:
+web			:
+mail			:
+password			:
+
+
+/**realizar base de datos de clientes PowderCake1.0 **/
+
+
+databases;
+
+CREATE DATABASES Clientes PowderCake1.0;
+CREATE TABLE Clientes PowderCake1.0(
+ID INT(10) NOT NULL AUTO_INCREMENT,
+Usuario VARCHAR(10) NOT NULL,
+Nivel INT(6) NOT NULL,
+Direccion Real VARCHAR (60) NOT NULL,
+Clave Acceso VARCHAR(10) NOT NULL,
+web VARCHAR(60) NOT NULL,
+Mail VARCHAR(60) NOT NULL,
+Password VARCHAR(10) NOT NULL,
+PRIMARY KEY (id)	
+);
+
+
+

@@ -1,0 +1,87 @@
+1_ buscar todos los empledos
+
+SELECT * FROM empleado
+
+2_ buscar todas las afp
+
+SELECT * FROM AFP
+
+3_ buscar de la tabla empleado 'NOMBRE,APELLIDO PATERNO, APELLIDO MATERNO, NOMBRE AFP, NOMBRE ISAPRE, CATEGORIA EMPLEADO Y SU ESTADO CIVIL'
+
+SELECT EMPLEADO.nombre_emp, empleado.appaterno_emp, empleado.apmaterno_emp
+SALUD.nombre_salud, AFP.nombre_afp
+FROM empleado, AFP, SALUD
+WHERE EMPLADO.cod_afp = AFP.cod_afp
+AND EMPLEADO.cod_salud = SALUD.cod_salud (todas las cond)
+
+OR EMPLEADO.cod_salud = SALUD.cod_salud (una de las cond)
+
+4_ buscar empleados que lleven mas de 10 años en la empresa
+operadores <, >, <>, =
+
+SELECT * FROM empleado
+WHERE EMPLEADO.annos_emp > 10
+
+SELECT * FROM empleado
+WHERE EMPLEADO.annos_emp < 10
+
+SELECT * FROM empleado
+WHERE EMPLEADO.annos_emp >= 10
+
+SELECT * FROM empleado
+WHERE EMPLEADO.annos_emp > 10 AND EMPLEADO.annos_emp <= 15
+
+SELECT * FROM empleado
+WHERE EMPLEADO.annos_emp BETWEEN 10 AND 15
+
+5_ buscar empleados que su nombre sea CLADIO o CAMILO
+
+SELECT * FROM empleado
+WHERE empleado.nombre_emp = 'CLAUDIO' 
+OR empleado.nombre_emp = 'CAMILO'
+
+SELECT * FROM empleado
+WHERE empleado.nombre_emp IN ('CLAUDIO', 'LUIS')
+
+SELECT * FROM empleado
+WHERE empleado.nombre_emp NOT IN ('CLAUDIO', 'LUIS')
+
+SELECT empleado.nombre_emp
+FROM empleado, comuna
+WHERE empleado.id_comuna = comuna.id_comuna
+AND COMUNA.nombre_comuna IN ('LAS CONDES')
+
+SP_HELP.empleado (crl+R)
+
+6_ Buscar empleados que su comuna sea las condes y tenga menos 15 años en la empresa
+
+SELECT *
+FROM empleado, comuna
+WHERE empleado.id_comuna = comuna.id_comuna
+AND COMUNA.nombre_comuna = 'LAS CONDES'
+AND empleado.annos_emp < 15
+
+7_ buscar todas las boletas del empleado 11636534
+
+SELECT empleado.nombre_emp, empleado.nombre_emp
+FROM empleado,BOLETA 
+WHERE empleado.numrut_emp=BOLETA.numrut_emp
+and empleado.numrut_emp=12642309
+
+SELECT * FROM BOLETA
+
+SELECT empleado.nombre_emp, empleado.nombre_emp +' '+ as 'nombre completo'
+FROM empleado,BOLETA 
+WHERE empleado.numrut_emp=BOLETA.numrut_emp
+and empleado.numrut_emp=12642309
+
+8_ saber cuantas boletas ha emitido el empleado 12113369
+
+SELECT COUNT(*)
+FROM empleado,BOLETA 
+WHERE empleado.numrut_emp=BOLETA.numrut_emp
+and empleado.numrut_emp=12642309
+
+SELECT SUM(MONTO_BOLETA) FROM BOLETAS --SUMA
+
+

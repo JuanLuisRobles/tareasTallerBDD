@@ -1,0 +1,14 @@
+•	La cardinalidad entre las tablas servicios, baños, cafeteria y seguridad no implica que hayan FK en ambos lados de la cardinalidad
+
+
+•	La cardinalidad entre servicio y pasajero no puede ser 1:N, sino N:M
+
+
+•	El campo vitacora_mant es un campo no atomico, ya que una vitacora es un registro de muchos eventos
+
+
+
+•	La cardinalidad entre aeropuerto y aerolinea no puede ser 1:N, ya que una aerolinea puede tener oficinas en varios 
+aeropuertos y un aeropuerto puede contener a varias aerolíneas
+
+•	La interrelacion entre un vuelo y un pasajero no debiera ser directa, ya que hay un documento de por medio que refleja esa interrelacion: el ticket de viaje

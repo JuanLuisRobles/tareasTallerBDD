@@ -1,0 +1,28 @@
+Roles
+usuarios
+personas
+comunas
+regiones
+
+valores multivaluados
+
+JORDANAS
+ID_
+
+NIVELES
+PK ID
+NOMBRE
+CODIGO
+
+ASIGNATURA
+ID
+NOMBRE
+CODIGO
+TIPO:ENUM
+HORAS
+
+ASIGNATURA_CARRERA
+ID
+AGIGNATURA_ID
+CARRERA_ID
+
